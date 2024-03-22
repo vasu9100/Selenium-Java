@@ -1,0 +1,83 @@
+package seleniumfwpractise.Tests;
+
+import java.io.IOException;
+import java.time.Duration;
+
+import java.util.List;
+
+//import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import seleniumfwpractise.TestComponents.BaseTest;
+import seleniumfwpractise.pageobjects.CartPage;
+import seleniumfwpractise.pageobjects.CheckOutPage;
+import seleniumfwpractise.pageobjects.LandingPage;
+import seleniumfwpractise.pageobjects.ProductCatalogue;
+import seleniumfwpractise.pageobjects.ThankyouPage;
+
+public class ErrorValidation extends BaseTest {
+	
+	String wrongProd= "ZARA COAT 23";
+
+	// public static void main(String[] args) throws InterruptedException {
+	// TODO Auto-generated method stub
+	@Test
+	public void LoginErrorValidation() throws IOException {
+		//String productName = "ZARA COAT 3";
+		//String countryName = "india";
+		
+		lp.loginApp("swa1@gmail.com", "Swahyd1@2024");
+		Assert.assertEquals("Incorrect email or password.",lp.getErrMsg());
+		}
+	
+	@Test
+	public void ProdErrValidation()
+	{
+		ProductCatalogue pc  = lp.loginApp("swa@gmail.com", "Swahyd@2024");
+		List<WebElement> allProducts = pc.getProducts();
+		pc.clickOnDesiredprodCartBtn(wrongProd);
+		CartPage cp = pc.gotoCart();
+		//CartPage cp =new CartPage(driver);
+	    Boolean res=cp.VerifyProdDisplay(wrongProd);
+	    Assert.assertFalse(res);
+		
+	}
+	
+}
+
+/*
+ * for(WebElement product:products) {
+ * if(product.findElement(By.cssSelector("b")).getText().equals(productName)) {
+ * System.out.println(product.findElement(By.cssSelector("b")).getText());
+ * product.findElement(By.cssSelector(".w-10")).click();
+ * System.out.println("OK....."); } }
+ */
+// wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
+// wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
+// driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
+// Thread.sleep(2000);
+/*
+ * List<WebElement> cartProducts =
+ * driver.findElements(By.cssSelector(".cart li")); for(WebElement
+ * cartProduct:cartProducts) {
+ * if(cartProduct.findElement(By.cssSelector(".cart h3")).getText().equals(
+ * productName))
+ * 
+ * { System.out.println("Selected Product is in the Cart");
+ * Assert.assertTrue(true); } }
+ * driver.findElement(By.cssSelector(".totalRow .btn-primary")).click();
+ * Thread.sleep(1000); Actions a = new Actions(driver);
+ * a.sendKeys(driver.findElement(By.
+ * cssSelector("input[placeholder='Select Country']")),
+ * countryName).build().perform();
+ * driver.findElement(By.cssSelector(".form-group button:nth-child(3)")).click()
+ * ; driver.findElement(By.cssSelector(".action__submit")).click();
+ */
+// String TqMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();

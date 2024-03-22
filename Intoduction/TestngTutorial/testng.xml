@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="test.Listeners"></listener>
+	</listeners>
+  <test thread-count="5" name="Normal">
+    <classes>
+      <class name="test.Day1"/>
+      <class name="test.day2"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="carloan">
+	  <classes>
+		  <class name="test.day4">
+			  <methods>
+				  <exclude name="car.*">
+					  </exclude>
+			  </methods>
+		  </class>
+	  </classes>
+  </test>
+  
+    <test name="homeloan">
+		<parameter name="URL" value="www.google.com"></parameter>
+		<classes>
+			<class name="test.day3">
+				
+				
+			</class>
+		</classes>
+	  
+  </test>
+  
+</suite> <!-- Suite -->

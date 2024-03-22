@@ -1,0 +1,45 @@
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+
+public class Second {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		String uname = "swarna";
+		System.setProperty("webdriver.chrome.driver",
+				"C:/Users/srigo/OneDrive/Desktop/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys(uname);
+		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector("button[type='submit']")).click();
+		//String msg = driver.findElement(By.cssSelector(".error")).getText();
+		//System.out.println(msg);
+		Thread.sleep(1000);
+		Assert.assertEquals(driver.findElement(By.xpath("//h2")).getText(),"Hello "+uname+",");
+		
+		System.out.println(driver.findElement(By.tagName("p")).getText());
+		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(),"You are successfully logged in.");
+	    System.out.println("Hello");
+	}
+	 // Please use temporary password 'rahulshettyacademy' to Login.
+	
+	public void getPwd(WebDriver driver) throws InterruptedException
+	{
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		Thread.sleep(1000);
+		String p1 = driver.findElement(By.cssSelector(".infoMsg")).getText();
+		System.out.println(p1);
+		String[] p2 = p1.split("'")
+		[1].split("'");
+		System.out.println(p2[0]);
+	}
+
+}

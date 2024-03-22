@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-21T23:26:29 IST" name="Suite" finished-at="2024-02-21T23:26:29 IST" duration-ms="148">
+    <groups>
+      <group name="swar">
+        <method signature="Day1.data()[pri:0, instance:test.Day1@383bfa16]" name="data" class="test.Day1"/>
+        <method signature="day3.homeloannn()[pri:0, instance:test.day3@290222c1]" name="homeloannn" class="test.day3"/>
+      </group> <!-- swar -->
+    </groups>
+    <test started-at="2024-02-21T23:26:29 IST" name="Normal" finished-at="2024-02-21T23:26:29 IST" duration-ms="54">
+      <class name="test.Day1">
+        <test-method is-config="true" signature="beforeMethos()[pri:0, instance:test.Day1@383bfa16]" started-at="2024-02-21T23:26:29 IST" name="beforeMethos" finished-at="2024-02-21T23:26:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethos -->
+        <test-method signature="data()[pri:0, instance:test.Day1@383bfa16]" started-at="2024-02-21T23:26:29 IST" name="data" finished-at="2024-02-21T23:26:29 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- data -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:test.Day1@383bfa16]" started-at="2024-02-21T23:26:29 IST" name="afterTest" finished-at="2024-02-21T23:26:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.Day1 -->
+      <class name="test.day2">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:test.day2@47faa49c]" started-at="2024-02-21T23:26:29 IST" name="beforetest" finished-at="2024-02-21T23:26:29 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetest -->
+        <test-method signature="dummy(java.lang.String,java.lang.String)[pri:0, instance:test.day2@47faa49c]" started-at="2024-02-21T23:26:29 IST" name="dummy" data-provider="getData" finished-at="2024-02-21T23:26:29 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Uname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[First Pwd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummy -->
+        <test-method signature="dummy(java.lang.String,java.lang.String)[pri:0, instance:test.day2@47faa49c]" started-at="2024-02-21T23:26:29 IST" name="dummy" data-provider="getData" finished-at="2024-02-21T23:26:29 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sec Uname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sec Pwd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummy -->
+        <test-method signature="dummy(java.lang.String,java.lang.String)[pri:0, instance:test.day2@47faa49c]" started-at="2024-02-21T23:26:29 IST" name="dummy" data-provider="getData" finished-at="2024-02-21T23:26:29 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Third Uname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Third Pwd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dummy -->
+      </class> <!-- test.day2 -->
+    </test> <!-- Normal -->
+    <test started-at="2024-02-21T23:26:29 IST" name="carloan" finished-at="2024-02-21T23:26:29 IST" duration-ms="1">
+    </test> <!-- carloan -->
+    <test started-at="2024-02-21T23:26:29 IST" name="homeloan" finished-at="2024-02-21T23:26:29 IST" duration-ms="6">
+      <class name="test.day4">
+        <test-method is-config="true" signature="beforesuite()[pri:0, instance:test.day4@ffaa6af]" started-at="2024-02-21T23:26:29 IST" name="beforesuite" finished-at="2024-02-21T23:26:29 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforesuite -->
+      </class> <!-- test.day4 -->
+      <class name="test.day3">
+        <test-method signature="homeloandummy(java.lang.String)[pri:0, instance:test.day3@290222c1]" started-at="2024-02-21T23:26:29 IST" name="homeloandummy" finished-at="2024-02-21T23:26:29 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[www.google.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeloandummy -->
+        <test-method signature="homeloannn()[pri:0, instance:test.day3@290222c1]" started-at="2024-02-21T23:26:29 IST" name="homeloannn" finished-at="2024-02-21T23:26:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeloannn -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:test.day3@290222c1]" started-at="2024-02-21T23:26:29 IST" name="aftersuite" finished-at="2024-02-21T23:26:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftersuite -->
+      </class> <!-- test.day3 -->
+    </test> <!-- homeloan -->
+  </suite> <!-- Suite -->
+</testng-results>

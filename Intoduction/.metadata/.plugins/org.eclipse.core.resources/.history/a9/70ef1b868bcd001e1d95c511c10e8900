@@ -1,0 +1,30 @@
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ActionsDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver",
+				"C:/Users/srigo/OneDrive/Desktop/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/loginpagePractise/#");
+		driver.findElement(By.cssSelector("a.blinkingText")).click();
+		Set<String> windows = driver.getWindowHandles();
+		Iterator<String> it = windows.iterator();
+		String pid = it.next();
+		String cid = it.next();
+		driver.switchTo().window(cid);
+		 String s =driver.findElement(By.cssSelector("p.im-para.red")).getText();
+		 System.out.println(s);
+		String ss = s.split("@")[1].split(".")[0];
+		 System.out.println(ss);
+
+	}
+
+}
